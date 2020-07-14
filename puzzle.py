@@ -107,10 +107,5 @@ class Puzzle:
         solution.reverse()
         return solution
 
-    def printPuzzle(self):
-        aux = 0
-        for i in range(self.column):
-            for j in range(self.column):
-                print(str(self.state[aux]) + " ", end="") # end="" pra nao ter quebra de linha
-                aux+=1
-            print()
+   
+    
