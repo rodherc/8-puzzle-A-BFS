@@ -9,6 +9,8 @@ class Puzzle:
     needs_hueristic = False
     #guarda o numero de instancias
     num_of_instances = 0
+    #guarda o numero de colunas do puzzle
+    column = 3
 
     #contrutor
     def __init__(self, state, parent, action, path_cost, needs_hueristic = False):
@@ -104,3 +106,11 @@ class Puzzle:
         solution = solution[:-1]
         solution.reverse()
         return solution
+
+    def printPuzzle(self):
+        aux = 0
+        for i in range(self.column):
+            for j in range(self.column):
+                print(str(self.state[aux]) + " ", end="") # end="" pra nao ter quebra de linha
+                aux+=1
+            print()
